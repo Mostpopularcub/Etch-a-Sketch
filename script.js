@@ -1,16 +1,23 @@
-const container= document.querySelector('.container');
+const sideLength = 600;
+let rows = 16;
+let columns = 16;
 
-for (let i = 0; i < 16; i++) {
-    
-    const row = document.createElement('div');
-    row.classList.add('row');
-    container.appendChild(row);
+const sketchPad = document.querySelector('.sketch-pad');
+sketchPad.style.height = `${sideLength}px`;
+sketchPad.style.width = `${sideLength}px`;
 
-    for (let i = 0; i < 16; i++) {
-    const column = document.createElement('div');
-    column.classList.add('column');
-    row.appendChild(column);
+function padGenerator(){
+for (let i = 0; i < (rows*columns); i++) {
     
+    const pixel = document.createElement('div');
+
+    pixel.style.width = `${(sideLength/columns) -2}px`;
+    pixel.style.height = `${(sideLength/rows) -2}px`;
+    pixel.classList.add('pixel');
+
+    sketchPad.appendChild(pixel);
     }
 
 }
+
+padGenerator()

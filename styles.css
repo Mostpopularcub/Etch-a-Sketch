@@ -1,16 +1,31 @@
-.container{
-  max-width: 1200px;
-  margin: 0 auto;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.row{
-  display:flex;
-  gap: 10px;
+.button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 10px;
 }
 
-.column{
+body{
+  background-color: rgb(127, 179, 161);
+}
+
+.sketch-pad{
+  display:flex;
+  flex-wrap: wrap;
+  margin: 100px auto;
+  background-color: white;
+}
+
+.pixel{
+  border: 1px solid whitesmoke;
   background-color: lightgray;
-  padding: 1rem 0;
-  flex:1;
+}
+
+.pixel:hover {
+  background-color: purple;
 }
